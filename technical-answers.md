@@ -23,7 +23,7 @@
 	```
 
 3.	How would you track down a performance issue in production? Have you ever had to do this?
-	- I used to use profier function on react devtool for track performance issue.
+	- I used to use profiler function on react devtool for track performance issue.
 	- Yes, I encountered a perfromance issue while building a slider. The slider should fire a query upon user stop, however due to some bad implementation it fires query contantly. I solved that by adding a de-bouncing function to make sure it has some buffer before sending out queries.
 4.	How would you improve the API that you just used?
 	- The API documentation really needs more clarification. I spent too much time trying to figure out why there's only 100 docs returned, and how to get more result. Finally I noticed I can make a use of `page` parameter where I found from the network call of the open library website.
