@@ -2,7 +2,8 @@
 	I spent around 5 hours on this assignment.
 	a.What would you add to your solution if you had more time?
 	- There are many to add.
-	- Off course, first need to fix compiling level warnings.
+	- First, documentation for each function for readability.
+	- Off course, need to fix compiling level warnings.
 	- Add es-lint to the environment for code styling.
 	- Add husky for commit level git hooks.
 	- More tests from unit tests on each individual component to the integration test to handle different types of responses(like error, 0 books, query support of different languages) from the server.
