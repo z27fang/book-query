@@ -17,12 +17,10 @@ function App() {
         <Header onConfirm={onConfirm}/>
         <div className="App-content-container">
           <div className="App-content">
-          
             <div className="books-container">
               <BookGallary userInput={userInput}/>
             </div>
           </div>
-          
         </div>
       </div>
   );

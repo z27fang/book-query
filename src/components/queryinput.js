@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import styles from './queryinput.module.css';
 
-function SearchBtn () {
+function SearchBtn ({onClick}) {
   return (
     <svg className={styles['search-button']}
     xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 512 512">
+    viewBox="0 0 512 512"
+    onClick={onClick}
+    id="query-input-button">
         <path
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -31,13 +33,15 @@ export default function QueryInput(props) {
   return (
         <div className={styles['search-box']}>
             <input
+              id="query-input-input"
               className={styles['search-box-input']}
               type="text" value={inputText}
               onChange={(e) => setInputText(e.target.value)}
               onKeyUp={(e) => handleOnKeyUp(e.key)} 
               placeholder="The Great Gatsby"/>
             <div className={styles['search-button-container']}>
-                <SearchBtn onClick={() => onConfirm(inputText)}/>
+                <SearchBtn 
+                onClick={() => onConfirm(inputText)}/>
             </div>
         </div>
   )

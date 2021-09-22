@@ -124,6 +124,7 @@ export default function BookGallary(props) {
       <div className={styles['card-container']}>
         {
           bookDisplay.map(book => <BookCard
+           key={book.key}
            title={book.title}
            cover={book.cover_i}
            author={book.author_name?.toString()}
