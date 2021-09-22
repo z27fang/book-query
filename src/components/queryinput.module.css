@@ -1,0 +1,33 @@
+.search-button {
+  width: 1.5rem;
+  cursor:pointer;
+}
+
+.search-box {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(34, 76, 138, 0.678);
+  height: 100%;
+  width: 300px;
+}
+
+.search-box-input {
+  width: 100%;
+  background: rgba(34, 76, 138, 0.678);
+  border-color: transparent;
+  color: white;
+}
+
+.search-button-container {
+  display: flex;
+  padding: 0.5rem;
+  z-index: 10;
+  background-color: rbga(255,255,255,0.5);
+}
+
+/* for screen size > 768px */ 
+@media (min-width: 768px) {
+  .query-input {
+    background-color: red;
+  }
+}

@@ -1,0 +1,45 @@
+.header-container {
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 50px;
+  background-color: rgba(10, 25, 41, 0.72);
+  font-size: large;
+  box-sizing: border-box;
+  border: skyblue;
+  border-bottom-width: 1px;
+  border-bottom: solid 2px rgb(21, 55, 68);
+  justify-content: center;
+}
+
+.header-body {
+  max-width: 1000px;
+  height: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (max-width: 600px) {
+  .header-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-text {
+    display: none;
+  }
+}
+
+
+
+
+.input-container {
+  height: 40px;
+}
