@@ -112,38 +112,47 @@ export default function BookGallary(props) {
 
   return (
     <div>
-      <div>Sort by: 
-        {
-          sortByOptions.map(option => 
-            <SortTag 
-            name={option} 
-            isSelected={option === sortBy} 
-            onClick={setSortBy}/>)
-        }
-      </div>
-      <div className={styles['card-container']}>
-        {
-          bookDisplay.map(book => <BookCard
-           key={book.key}
-           title={book.title}
-           cover={book.cover_i}
-           author={book.author_name?.toString()}
-           publishedDate={book.first_publish_year}
-          />)
-        }
-      </div>
-      <div className={styles['page-selector']}>
-        <div className={styles['page-button']} 
-        onClick={() => {if(page !== 1) setPage(page - 1)}}>
-          -
+      {
+        books.length === 0 ?
+        <div>{displayInfo}</div>:
+        <>
+        <div>Sort by: 
+          {
+            sortByOptions.map(option => 
+              <SortTag 
+              name={option} 
+              isSelected={option === sortBy} 
+              onClick={setSortBy}/>)
+          }
         </div>
-        <div>{page + '/' + totalPages}</div>
-	      <div className={styles['page-button']} 
-        onClick={() => {if(page !== totalPages) setPage(page + 1)}}>
-          +
+        <div className={styles['card-container']}>
+          {
+            bookDisplay.map(book => <BookCard
+            key={book.key}
+            title={book.title}
+            cover={book.cover_i}
+            author={book.author_name?.toString()}
+            publishedDate={book.first_publish_year}
+            />)
+          }
         </div>
-      </div>
-    </div>
+        <div className={styles['page-selector']}>
+          <div className={styles['page-button']} 
+          onClick={() => {if(page !== 1) setPage(page - 1)}}>
+            -
+          </div>
+          <div>{page + '/' + totalPages}</div>
+          <div className={styles['page-button']} 
+          onClick={() => {if(page !== totalPages) setPage(page + 1)}}>
+            +
+          </div>
+        </div>
+        </>
+        
+      }
+
+  </div>
+      
   )
 
 }

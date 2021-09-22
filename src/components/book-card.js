@@ -14,7 +14,7 @@ export default function BookCard(props){
       <img className={styles['book-cover']} src={'http://covers.openlibrary.org/b/id/' + cover + '-M.jpg'}
       alt="No Cover Available"/> 
       <div className={styles['book-title']}>{title + ' ' +
-      `${publishedDate ? '(' + publishedDate + ')' : ''}`}</div>
+      `${publishedDate ?? ''}`}</div>
       <div className={styles['book-author']}>{author}</div>
     </div>
   )
