@@ -1,5 +1,5 @@
 1. How long did you spend on the coding assignment? 
-	I spent around 5 hours on this assignment.
+	I spent around 5 hours on this assignment. Some time after work on 9/21, and some time during lunch break on 22nd.
 	a.What would you add to your solution if you had more time?
 	- There are many to add.
 	- First, documentation for each function for readability.
